@@ -1,0 +1,138 @@
+body{
+    background:linear-gradient(180deg, #5e61a5 0%, #2f326b 26%, #101122 50%, #010511 90%);
+    background-repeat: no-repeat;
+    font-family: "Helvetica", sans-serif;
+
+}
+
+table, th, td{
+    cursor: default;
+    padding: 6px;
+    text-align: center;
+    border: 0;
+}
+
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: bolder;
+    color: #E7CFFA;
+    background-color: #9860C4;
+}
+
+td{
+    font-weight:bold;
+    background-color: #E1CDFC;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #593A6A;
+}
+
+
+td:nth-child(even){
+    background-color: #D4B4FF;
+}
+
+hr{
+    border: 1px solid #c19ced;
+    margin-top: 4%;
+}
+
+#resp{
+    overflow-x: auto;
+}
+
+table{
+    max-width: max-content;
+    margin: auto;
+}
+
+h2{
+    text-shadow: 4px 4px 4px #302A37;
+    max-width: max-content;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    color:#F9F6FC;
+    transition-duration: 0.4s;
+    cursor: default;
+    margin-top: 2%;
+}
+#link{
+    color:#AA4212;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+h2:hover{
+    letter-spacing: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a{
+    text-decoration:none;
+    color: #ddd0ed;
+}
+
+a:visited{
+    color: #cfb3f2;
+}
+
+a:hover{
+   background: -webkit-linear-gradient(#c892d8, #c55ce3);
+   -webkit-background-clip:text;
+   -webkit-text-fill-color:transparent;
+}
+
+#link:hover{
+    letter-spacing: 1px;
+    text-shadow: 4px 4px 4px #0C0C0C;
+}
+#center-page{
+    max-width: max-content;
+    margin: auto;
+    font-weight: bold;
+    color: #DBC7F3;
+    cursor: default;
+}
+h4{
+    font-size:158%;
+    margin-bottom: 8%;
+    background: -webkit-linear-gradient( #dda6ff, #b67cda);
+   -webkit-background-clip:text;
+   -webkit-text-fill-color:transparent;
+   letter-spacing: 1px;
+    
+}
+
+h3{
+    font-size: 120%;
+    background: -webkit-linear-gradient( #E6AEF7, #9E6CDB);
+   -webkit-background-clip:text;
+   -webkit-text-fill-color:transparent;
+   letter-spacing: 1px;
+}
+
+#ficha{
+    max-width: max-content;
+    margin: auto;
+    margin-bottom: 1%;
+    cursor: default;
+}
+
+#feitopor{
+    font-size: 90%;
+    font-weight: bolder;
+    color:#F9F6FC;
+    max-width: max-content;
+    margin: auto;
+    text-align: center;
+}

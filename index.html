@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <title>Catálogo de músicas</title>
+        
+    </head>
+    <body>
+        <h2><i class="fas fa-music"></i>  Catálogo de Músicas Soul <i class="fas fa-music"></i> </h2>
+        <div id="lista" border="1"> </div>
+
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    var disco = JSON.parse(this.responseText);
+					
+					var string = ''
+					for (let i = 0; i < disco['id'].length; i++){
+						string += `
+						<div id="center-page">
+    						<h3><i class="fas fa-compact-disc"></i> Dados do Disco <i class="fas fa-compact-disc"></i></h3>
+    						<p>ID do disco: ${disco.id[i]}</p>
+    						<p>Título: ${disco.titulo[i]}</p>
+    						<p>Artista: ${disco.artista[i]}</p>
+    					</div>
+    					<h4 id="ficha">Ficha <i class="fas fa-clipboard"></i></h4>
+					  
+						<div id="resp">
+						<table>
+							<tr>
+								<th>Ano</th>
+								<th>País</th>
+								<th>Gravadora</th>
+								<th>Preço</th>
+							</tr>
+							<tr>
+								<td >${disco.ficha[i]['ano']}</td>
+								<td >${disco.ficha[i]['pais']}</td>
+								<td >${disco.ficha[i]['gravadora']}</td>
+								<td >${disco.ficha[i]['preco']}</td>
+							</tr>
+						</table>
+						</div>
+						<hr>
+						`
+					}
+                    document.getElementById("lista").innerHTML= string
+                }
+            };
+
+                xmlhttp.open("POST", "catalogo.json", true);
+
+                xmlhttp.send();
+            </script>
+            
+        <br>
+        <p id="feitopor">Pedro Tejon e Ana Giulia 3DSIEM</p>
+        <p id="link"><a href="catalogo.json" target="_blank">Acesso ao catálogo em JSON <i class="fas fa-record-vinyl"></i></a></p>
+        
+    </body>
+</html>
